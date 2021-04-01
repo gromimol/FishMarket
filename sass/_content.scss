@@ -369,6 +369,7 @@
 .actual-product {
     padding: 8rem 8rem 10rem;
     position: relative;
+    overflow: hidden;
     &::before {
         content: '';
         width: 100%;
@@ -379,7 +380,17 @@
         background: url('../img/decor/actual_top_decor.jpg') 0 0 no-repeat;
         background-size: 100% 100%;
     }
-    .h2 {
+    &::after {
+        content: '';
+        background-color: #fff;
+        width: 100%;
+        height: 7rem;
+        position: absolute;
+        bottom: -4rem;
+        left: 0;
+        transform: skewY(-1.2deg);
+    }
+    .h2, .h3 {
         margin-bottom: .75em;
     }
     p {
@@ -443,7 +454,8 @@
     }
 }
 .text-block {
-    h1, h2, h3, h4 {
+    h1, h2, h3, h4,
+    .h1, .h2, .h3, .h4 {
         color: var(--blue);
         margin-bottom: 0.5em;
     }

@@ -39,6 +39,25 @@
     .footer__main {
         padding-top: 4rem;
     }
+
+    .all-product__title {
+        padding: 3rem;
+    }
+
+    .catalog-block .all-product+.section,
+    .all-product+.section {
+        padding-top: 3rem;
+    }
+
+    .filter-block__item__title {
+        font-size: 12px;
+    }
+
+    .filter-block__item {
+        .select {
+            width: 220px;
+        }
+    }
 }
 
 /* 1280 */
@@ -213,6 +232,34 @@
         width: 33.3333%;
         margin-bottom: 30px;
         padding-right: 10px;
+    }
+
+    .catalog-block__list li {
+        margin-bottom: 1em;
+    }
+
+    .catalog-list.three-column .catalog-list__item {
+        width: 50%;
+    }
+
+    .catalog-block {
+        .actual-product {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+    }
+
+    .all-product__title {
+        font-size: 4rem;
+    }
+
+    .all-product__list__item {
+        width: 31%;
+    }
+
+    .all-product__list__menu,
+    .all-product__list__item__title {
+        font-size: 16px;
     }
 }
 
@@ -519,6 +566,9 @@
     .h2 {
         font-size: 24px;
     }
+    h3, .h3 {
+        font-size: 22px;
+    }
 
     .actual-product .h2 {
         text-align: center;
@@ -630,9 +680,11 @@
             background-color: #fff;
             margin-bottom: 0 !important;
             padding: 10px 15px;
+
             br {
                 display: none;
             }
+
             &.active {
                 display: block;
             }
@@ -656,10 +708,12 @@
                 right: 15px;
                 top: 50%;
             }
+
             &.active::after {
                 transform: translateY(0) rotate(-135deg);
             }
-            & + .footer__item__line.active {
+
+            &+.footer__item__line.active {
                 padding-top: 20px;
             }
         }
@@ -682,6 +736,68 @@
         border: none;
         padding: 20px 15px;
         font-size: 12px;
+    }
+
+    .catalog-list.three-column .catalog-list__item,
+    .catalog-list.four-column .catalog-list__item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .catalog-list__item {
+        .product {
+            padding: 0;
+        }
+    }
+    .filter-block {
+        background-image: url('../img/decor/filter_bg_mobile.png');
+        margin-bottom: 40px;
+        display: block;
+        padding: 35px 30px;
+        .filter-block__item{
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .filter-block__item__title {
+        margin-bottom: 10px;
+    }
+    .filter-block__item {
+        display: block;
+    }
+    .filter-block__item .select {
+        width: 100%;
+        max-width: 320px;
+    }
+    .select .placeholder,
+    .select ul li {
+        font-size: 14px;
+    }
+    .pagination {
+        margin: 30px 0;
+    }
+    .pagination li {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        a {
+            font-size: 16px;
+            line-height: 0.8;
+        }
+    }
+    .all-product__title {
+        padding: 30px 20px;
+        text-align: center;
+        background-image: url('../img/decor/all_product_title_mob.png');
+    }
+    .all-product__list__menu, .all-product__list__item__title {
+        font-size: 13px;
+    }
+    .all-product__list__item {
+        width: 49%;
+    }
+    .all-product__list__menu li:not(:last-child) {
+        margin-bottom: 0.5em;
     }
 }
 
