@@ -1415,6 +1415,58 @@ b, strong {
         .pagination li a.next-page:hover {
           opacity: 0.6; }
 
+.category-block {
+  padding: 5rem 4rem 0; }
+  .category-block > .h2 {
+    margin-bottom: 11rem; }
+  .category-block .section.text-block {
+    padding: 5rem 0; }
+
+.category-item {
+  margin-bottom: 10rem; }
+  .category-item:last-child {
+    margin-bottom: 3rem; }
+  .category-item .all-product__list__menu li:not(:last-child) {
+    margin-bottom: 5px; }
+  .category-item:nth-child(odd) .category-item__title {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    background: url("../img/decor/category_title_left.png") 0 0 no-repeat;
+    background-size: 100% 100%; }
+  .category-item:nth-child(odd) .category-item__title__img {
+    right: auto;
+    left: 0; }
+
+.category-item__title {
+  padding: 5rem 3rem;
+  height: 21rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background: url("../img/decor/category_title_right.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  margin-bottom: 5rem; }
+  .category-item__title .h3 {
+    white-space: nowrap; }
+
+.category-item__title__img {
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  width: 50rem;
+  height: 27rem; }
+  .category-item__title__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain; }
+
 /*Footer*/
 .footer {
   padding: 10rem 4rem 0;
@@ -1657,7 +1709,17 @@ b, strong {
   .footer__item__line,
   .footer__menu,
   .footer__bottom {
-    font-size: 14px; } }
+    font-size: 14px; }
+
+  .category-item__title__img {
+    width: 40rem;
+    height: 21rem; }
+    .category-item__title__img img {
+      -o-object-position: 0 100%;
+         object-position: 0 100%; }
+
+  .category-block > .h2 {
+    margin-bottom: 5rem; } }
 /* 1024 */
 @media (max-width: 768px) {
   html {
@@ -1693,7 +1755,17 @@ b, strong {
 
   .all-product__list__menu,
   .all-product__list__item__title {
-    font-size: 16px; } }
+    font-size: 16px; }
+
+  .category-item__title__img {
+    width: 34rem;
+    height: 20rem; }
+
+  .category-item__title {
+    height: 19rem; }
+
+  .category-item {
+    margin-bottom: 5rem; } }
 /*768 */
 @media (max-width: 767px) {
   .hide-on-mobile {
@@ -2124,7 +2196,62 @@ b, strong {
     width: 49%; }
 
   .all-product__list__menu li:not(:last-child) {
-    margin-bottom: 0.5em; } }
+    margin-bottom: 0.5em; }
+
+  .category-item__title__img {
+    display: none; }
+
+  .category-item:nth-child(odd) .category-item__title {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+
+  .category-item {
+    margin-bottom: 10px; }
+
+  .category-item__title {
+    background-image: url("../img/decor/categor_title_right_mob.png");
+    height: 70px;
+    padding: 0 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 0; }
+    .category-item__title::after {
+      content: '';
+      width: 13px;
+      height: 7px;
+      background: url("../img/icons/arrow_down.svg") 0 0 no-repeat;
+      background-size: contain; }
+    .category-item__title.active::after {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
+
+  .category-item:nth-child(odd) .category-item__title {
+    background-image: url("../img/decor/category_title_left_mob.png"); }
+
+  .category-item__title .h3 {
+    font-size: 17px; }
+
+  .category-item__content {
+    padding: 0 15px;
+    margin-top: 20px;
+    display: none; }
+    .category-item__content.active {
+      display: block; }
+
+  .catalog-block__list {
+    font-size: 12px; }
+    .catalog-block__list li {
+      margin: 0 10px 10px 0; }
+
+  .catalog-block,
+  .category-block {
+    padding: 30px 15px; } }
 /* 767 */
 
 /*# sourceMappingURL=style.css.map */

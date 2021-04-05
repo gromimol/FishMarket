@@ -101,4 +101,9 @@ $(document).ready(function() {
         parent.removeClass('is-open').find('.placeholder').text( $(this).text() );
         parent.find('input[type=hidden]').attr('value', $(this).attr('data-value') );
       });
+
+    // аккордеон категории на мобильном
+    $('.category-item__title').on('click', function() {
+        $(this).toggleClass('active').next('.category-item__content').toggleClass('active')
+    }) 
 })

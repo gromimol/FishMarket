@@ -214,7 +214,16 @@
     .footer__bottom {
         font-size: 14px;
     }
-
+    .category-item__title__img{
+        width: 40rem;
+        height: 21rem;
+        img {
+            object-position: 0 100%;
+        }
+    }
+    .category-block > .h2 {
+        margin-bottom: 5rem;
+    }
 }
 
 /* 1024 */
@@ -260,6 +269,16 @@
     .all-product__list__menu,
     .all-product__list__item__title {
         font-size: 16px;
+    }
+    .category-item__title__img {
+        width: 34rem;
+        height: 20rem;
+    }
+    .category-item__title {
+        height: 19rem;
+    }
+    .category-item {
+        margin-bottom: 5rem;
     }
 }
 
@@ -798,6 +817,59 @@
     }
     .all-product__list__menu li:not(:last-child) {
         margin-bottom: 0.5em;
+    }
+    .category-item__title__img {
+        display: none;
+    }
+    .category-item:nth-child(odd) .category-item__title {
+        flex-direction: row;
+    }
+    .category-item {
+        margin-bottom: 10px;
+    }
+    .category-item__title {
+        background-image: url('../img/decor/categor_title_right_mob.png');
+        height: 70px;
+        padding: 0 30px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0;
+        &::after {
+            content: '';
+            width: 13px;
+            height: 7px;
+            background: url('../img/icons/arrow_down.svg') 0 0 no-repeat;
+            background-size: contain;
+        }
+        &.active {
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .category-item:nth-child(odd) .category-item__title {
+        background-image: url('../img/decor/category_title_left_mob.png');
+    }
+    .category-item__title .h3 {
+        font-size: 17px;
+    }
+    .category-item__content {
+        padding: 0 15px;
+        margin-top: 20px;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    .catalog-block__list {
+        font-size: 12px;
+        li {
+            margin: 0 10px 10px 0;
+        }
+    }
+    .catalog-block,
+    .category-block {
+        padding: 30px 15px;
     }
 }
 
