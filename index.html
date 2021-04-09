@@ -145,19 +145,39 @@
 						</svg>
 						<span class="cart-count">14</span>
 					</a>
-					<a href="#" class="header__options__item hide-on-mobile">
-						<svg width="17" height="33" xmlns="http://www.w3.org/2000/svg" version="1.1"
-							xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/"
-							viewBox="0 0 17 33">
-							<g>
-								<g>
-									<path
-										d="M8.25815,11.92415c-1.95751,0 -3.55099,-1.55092 -3.55099,-3.45589c0,-1.90581 1.59348,-3.45547 3.55099,-3.45547c1.95683,0 3.5511,1.54966 3.5511,3.45547c0,1.90539 -1.59428,3.45589 -3.5511,3.45589zM10.50371,8.46826c0,-1.20487 -1.00719,-2.1845 -2.24556,-2.1845c-1.23768,0 -2.24487,0.9809 -2.24487,2.18493c0,1.20445 1.00719,2.18366 2.24487,2.18366c1.23768,0 2.24556,-0.97964 2.24556,-2.18408zM16.13626,23.08916v7.26204h-5.55153v2.70064h-5.01652v-17.13293c-3.2222,-1.10467 -5.43171,-4.10252 -5.43171,-7.45064c0,-4.35806 3.643,-7.90362 8.12164,-7.90362c4.47865,0 8.12244,3.54556 8.12244,7.90404c0,3.52998 -2.3576,6.57204 -5.79586,7.56641v4.30755h5.55153v1.27096h-1.30692l-5.55153,0.00042v-6.5733l0.50663,-0.11367c3.0645,-0.68705 5.28923,-3.40326 5.28923,-6.45837c0,-3.65754 -3.0582,-6.63266 -6.81622,-6.63266c-3.75801,0 -6.81622,2.97512 -6.81622,6.63266c0,2.94565 2.03785,5.56672 4.95701,6.37502l0.47482,0.13093v16.80709h2.40475v-2.70106h5.55153v-5.9915z"
-										fill="currentColor" fill-opacity="1"></path>
-								</g>
-							</g>
-						</svg>
-					</a>
+					<div class="login-wrapper">
+                        <a href="#" class="header__options__item hide-on-mobile autorize-link">
+                            <svg width="17" height="33" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/"
+                                viewBox="0 0 17 33">
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M8.25815,11.92415c-1.95751,0 -3.55099,-1.55092 -3.55099,-3.45589c0,-1.90581 1.59348,-3.45547 3.55099,-3.45547c1.95683,0 3.5511,1.54966 3.5511,3.45547c0,1.90539 -1.59428,3.45589 -3.5511,3.45589zM10.50371,8.46826c0,-1.20487 -1.00719,-2.1845 -2.24556,-2.1845c-1.23768,0 -2.24487,0.9809 -2.24487,2.18493c0,1.20445 1.00719,2.18366 2.24487,2.18366c1.23768,0 2.24556,-0.97964 2.24556,-2.18408zM16.13626,23.08916v7.26204h-5.55153v2.70064h-5.01652v-17.13293c-3.2222,-1.10467 -5.43171,-4.10252 -5.43171,-7.45064c0,-4.35806 3.643,-7.90362 8.12164,-7.90362c4.47865,0 8.12244,3.54556 8.12244,7.90404c0,3.52998 -2.3576,6.57204 -5.79586,7.56641v4.30755h5.55153v1.27096h-1.30692l-5.55153,0.00042v-6.5733l0.50663,-0.11367c3.0645,-0.68705 5.28923,-3.40326 5.28923,-6.45837c0,-3.65754 -3.0582,-6.63266 -6.81622,-6.63266c-3.75801,0 -6.81622,2.97512 -6.81622,6.63266c0,2.94565 2.03785,5.56672 4.95701,6.37502l0.47482,0.13093v16.80709h2.40475v-2.70106h5.55153v-5.9915z"
+                                            fill="currentColor" fill-opacity="1"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                        <div class="autorize-window">
+                            <form action="" class="autorize-form">
+                                <span class="autorize-title text-uppercase">Вход</span>
+                                <div class="input-wrapper">
+                                    <input type="mail" class="form-input" placeholder="E-mail:">
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="password" class="form-input" placeholder="Пароль:">
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn--blue" type="submit">Войти</buttom>
+                                </div>
+                                <div class="autorize-window__row flex justify-between">
+                                    <a href="#" class="forget-pass-link">Забыли пароль?</a>
+                                    <a href="#" class="login-link">Зарегистрироваться</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 				</div>
 			</div>
 			<div class="header__bottom hide-on-mobile">
@@ -204,7 +224,7 @@
 									</g>
 								</svg>
 							</a>
-							<a href="#" class="header__options__item">
+							<a href="#" class="header__options__item js--popup" data-modal="authorization">
 								<svg width="17" height="33" xmlns="http://www.w3.org/2000/svg" version="1.1"
 									xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/"
 									viewBox="0 0 17 33">
@@ -1104,6 +1124,31 @@
 				</div>
 				<div id="overlay"></div>
 			</div>
+
+			<div class="popup-overlay"></div> 
+            <div class="popup-window autorize-mobile" id="authorization">
+                <span class="close-popup"></span>
+                <div class="popup__content">
+                    <div class="autorize-window">
+                        <form action="" class="autorize-form">
+                            <span class="autorize-title text-uppercase">Вход</span>
+                            <div class="input-wrapper">
+                                <input type="mail" class="form-input" placeholder="E-mail:">
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="password" class="form-input" placeholder="Пароль:">
+                            </div>
+                            <div class="btn-container">
+                                <button class="btn btn--blue" type="submit">Войти</buttom>
+                            </div>
+                            <div class="autorize-window__row flex justify-between">
+                                <a href="#" class="forget-pass-link">Забыли пароль?</a>
+                                <a href="#" class="login-link">Зарегистрироваться</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 		</main>
 	</div><!-- end wrapper -->
 

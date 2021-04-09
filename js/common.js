@@ -106,4 +106,118 @@ $(document).ready(function() {
     $('.category-item__title').on('click', function() {
         $(this).toggleClass('active').next('.category-item__content').toggleClass('active')
     }) 
+
+
+    // Product-cart slider
+    $('.product-review-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.product-review-nav'
+    });
+    $('.product-review-nav').slick({
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      asNavFor: '.product-review-slider',
+      arrows:true,
+      focusOnSelect: true,
+      vertical:true,
+      responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 6,
+                    vertical:false,
+                    arrows:false
+                }
+            }
+        ]
+    });
+
+
+    // tabs
+    $("ul.tabs li").click(function () {
+        $(".tab_content").hide();
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn();
+        $("ul.tabs li").removeClass("active");
+        $(this).addClass("active");
+        $(".tab_accordion").removeClass("d_active");
+        $(".tab_accordion[rel^='" + activeTab + "']").addClass("d_active");
+    });
+
+
+    // Селектор +/-
+    $(document).ready(function() {
+        $('.min').click(function () {
+          var $input = $(this).parent().find('input');
+          var count = parseInt($input.val()) - 1;
+          count = count < 1 ? 1 : count;
+          $input.val(count);
+          $input.change();
+          return false;
+        });
+        $('.max').click(function () {
+          var $input = $(this).parent().find('input');
+          $input.val(parseInt($input.val()) + 1);
+          $input.change();
+          return false;
+        });
+    });
+
+
+    // remove block
+    $(function(){
+        $ ('.corf-item').each(function(){
+          var closeTrigger = $(this).find('.close-block').length;
+          $('.del-block').on('click', function(){
+            $(this).closest('.corf-item').fadeOut(100);
+          });
+        });
+    });
+
+
+    // Like
+    $('.like-btn').click(function () {  
+        $(this).toggleClass('active');
+        $('.like-btn').not(this).removeClass('active');
+    });
+
+
+    // Autorize window
+    $('.autorize-link').on('click', function (e) {
+    	e.preventDefault();
+        $('.autorize-window').addClass('active');
+    });
+    // -- Закрываем при клике вне элемента
+    $(document).mouseup(function (e){  
+        var div = $(".autorize-window");  //класс элемента вне которого клик
+        if (!div.is(e.target) && div.has(e.target).length === 0) {  
+          div.removeClass('active');  
+        }
+    });
+
+    // Popup
+      $('.js--popup').on('click', function (e) {
+        e.preventDefault();
+        let btn = $(this).data('modal');
+        $('#' + btn).addClass('active');
+        $('.popup-overlay').show();
+        $('body').toggleClass('noscroll');
+      })
+
+      $('.close-popup, .popup-overlay').on('click', function (e) {
+        e.preventDefault();
+        $('.popup-overlay').hide();
+        $('.popup-window').removeClass('active');
+        $('body').removeClass('noscroll');
+      })
+    
 })
