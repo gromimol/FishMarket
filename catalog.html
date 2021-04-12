@@ -74,8 +74,25 @@
                 </a>
                 <div class="header__contact hide-on-mobile">
                     <div class="location gray">Москва</div>
-                    <a href="tel:+74959777737" class="header__phone gray">(495) 977-77-37</a>
+                    <a href="#" class="header__phone gray callback-link">(495) 977-77-37</a>
                     <div class="header__contact__note blue">хорошие снасти для хороших людей</div>
+                    <div class="callback-window">
+                        <form action="" class="autorize-form callback-form">
+                            <div class="autorize-window__row flex justify-between">
+                                <a href="#" class="forget-pass-link">Перезвоните мне</a>
+                                <a href="#" class="login-link">Задать вопрос</a>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="mail" class="form-input" placeholder="E-mail:">
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="password" class="form-input" placeholder="Пароль:">
+                            </div>
+                            <div class="btn-container">
+                                <button class="btn btn--blue" type="submit">Войти</buttom>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <div class="header__menu__wrapper flex align-center hide-on-mobile">
                     <div class="mobile-catalog-btn">
@@ -90,7 +107,7 @@
                     </ul>
                 </div>
                 <div class="header__options flex align-center gray">
-                    <a href="tel:+74959777737" class="header__options__item show-on-mobile">
+                    <a href="tel:+74959777737" class="header__options__item show-on-mobile js--popup" data-modal="callback">
                         <svg width="25" height="26" xmlns="http://www.w3.org/2000/svg" version="1.1"
                             xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/"
                             viewBox="0 0 25 26">
@@ -937,6 +954,7 @@
             </div>
 
             <div class="popup-overlay"></div> 
+            <!-- Окно авторизации-->
             <div class="popup-window autorize-mobile" id="authorization">
                 <span class="close-popup"></span>
                 <div class="popup__content">
@@ -956,6 +974,31 @@
                                 <a href="#" class="forget-pass-link">Забыли пароль?</a>
                                 <a href="#" class="login-link">Зарегистрироваться</a>
                             </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Окно обратного звонка-->
+             <div class="popup-window autorize-mobile" id="callback">
+                <span class="close-popup"></span>
+                <div class="popup__content">
+                    <div class="autorize-window callback-window">
+                        <form action="" class="callback-form">
+                            <div class="autorize-window__row flex justify-between">
+                                <a href="#" class="forget-pass-link">Перезвоните мне</a>
+                                <a href="#" class="login-link">Задать вопрос</a>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="mail" class="form-input" placeholder="E-mail:">
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="password" class="form-input" placeholder="Пароль:">
+                            </div>
+                            <div class="btn-container">
+                                <button class="btn btn--blue" type="submit">Войти</buttom>
+                            </div>
+                            <p class="callback-window__descr">Вы можете сэкономить время, позвонив нам прямо сейчас:</p>
+                            <a href="tel:+703049958761" class="callback-link__phone">(495) 977-77-37</a>
                         </form>
                     </div>
                 </div>

@@ -185,7 +185,8 @@ $(document).ready(function() {
 
 
     // Like
-    $('.like-btn').click(function () {  
+    $('.like-btn').click(function (e) {  
+        e.preventDefault();
         $(this).toggleClass('active');
         $('.like-btn').not(this).removeClass('active');
     });
@@ -193,12 +194,25 @@ $(document).ready(function() {
 
     // Autorize window
     $('.autorize-link').on('click', function (e) {
-    	e.preventDefault();
+        e.preventDefault();
         $('.autorize-window').addClass('active');
     });
     // -- Закрываем при клике вне элемента
     $(document).mouseup(function (e){  
         var div = $(".autorize-window");  //класс элемента вне которого клик
+        if (!div.is(e.target) && div.has(e.target).length === 0) {  
+          div.removeClass('active');  
+        }
+    });
+
+     // Callback window
+    $('.callback-link').on('click', function (e) {
+        e.preventDefault();
+        $('.callback-window').addClass('active');
+    });
+    // -- Закрываем при клике вне элемента
+    $(document).mouseup(function (e){  
+        var div = $(".callback-window");  //класс элемента вне которого клик
         if (!div.is(e.target) && div.has(e.target).length === 0) {  
           div.removeClass('active');  
         }
