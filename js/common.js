@@ -185,8 +185,7 @@ $(document).ready(function() {
 
 
     // Like
-    $('.like-btn').click(function (e) {  
-        e.preventDefault();
+    $('.like-btn').click(function () {  
         $(this).toggleClass('active');
         $('.like-btn').not(this).removeClass('active');
     });
